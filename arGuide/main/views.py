@@ -10,8 +10,8 @@ def mainPage(request):
     else:
         visit_status = "Welcome! This is your first visit to this site."
         # 设置 'hasVisited' cookie
-        response = render(request, 'main.html', {'visit_status': visit_status})
+        response = render(request, 'index.html', {'visit_status': visit_status})
         response.set_cookie('hasVisited', 'True')
         return response
 
-    return render(request, 'main.html', {'visit_status': visit_status})
+    return render(request, 'index.html', {'visit_status': visit_status})
